@@ -5,9 +5,9 @@
   "main": "gulpfile.js",
   "scripts": {
     "build": "gulp build && webpack",
-    "watch": "gulp watch",
+    "watch": "webpack",
     "lint": "gulp lint",
-    "test": "gulp test"
+    "test": "jasmine"
   },
   "keywords": [
     "gulp",
