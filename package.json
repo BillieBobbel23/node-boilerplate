@@ -4,7 +4,7 @@
   "description": "Build, watch, lint and test Front-end assets",
   "main": "gulpfile.js",
   "scripts": {
-    "build": "gulp build",
+    "build": "gulp build && webpack",
     "watch": "gulp watch",
     "lint": "gulp lint",
     "test": "gulp test"
@@ -20,6 +20,7 @@
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
     "gulp-csslint": "^1.0.1",
     "gulp-csso": "^3.0.1",
     "gulp-fontmin": "^0.7.4",
@@ -29,9 +30,13 @@
     "gulp-stats": "0.0.4",
     "gulp-stylestats": "^3.0.1",
     "gulp-ttf2woff2": "^2.0.2",
-    "gulp-watch": "^5.0.0"
+    "gulp-watch": "^5.0.0",
+    "jasmine": "^3.1.0",
+    "webpack": "^4.1.0",
+    "webpack-cli": "^2.0.10"
   },
   "dependencies": {
+    "lodash": "^4.17.5",
     "npm": "^5.7.1"
   }
 }
