@@ -2,19 +2,22 @@
   "name": "gulp-boilerplates",
   "version": "0.1.0",
   "description": "Build, watch, lint and test Front-end assets",
-  "main": "gulpfile.js",
+  "main": "package.json",
   "scripts": {
     "build": "gulp build && webpack",
     "watch": "webpack",
     "lint": "gulp lint",
-    "test": "jasmine"
+    "test": "jasmine",
+    "clean": "gulp clean"
   },
   "keywords": [
     "gulp",
-    "gulp-3",
     "gulpjs",
+    "webpack",
+    "jasmine",
     "boilerplate",
-    "linter"
+    "linting",
+    "testing"
   ],
   "author": "Ralph van Barneveld",
   "license": "ISC",
