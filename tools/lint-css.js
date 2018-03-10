@@ -1,6 +1,6 @@
 
 // Build CSS from SCSS files
-module.exports = function () {
+module.exports = function (paths) {
     return function lintCss(){
       var gulp = require('gulp');
       var csslint = require('gulp-csslint');
