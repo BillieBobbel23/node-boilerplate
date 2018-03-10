@@ -13,8 +13,6 @@ gulp.task("build", ['make-css', 'minify-img', 'make-fonts']);
 //gulp.task("build-test")
 
 gulp.task('lint-css', require('./tools/lint-css')());
-//gulp.task('lint-html', require('./gulp-tasks/lint-html')());
+gulp.task('lint-html', require('./tools/lint-html')());
 
-gulp.task("lint", ['lint-css']);
-
-//gulp.task("test", ['lint-css', 'lint-html']);
+gulp.task("lint", ['lint-html', 'lint-css']);
