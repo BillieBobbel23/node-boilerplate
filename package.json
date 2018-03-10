@@ -9,7 +9,7 @@
     "lint": "gulp lint",
     "test": "jasmine",
     "clean": "gulp clean",
-    "debug": "gulp build-test && webpack"
+    "debug": "git clone https://github.com/BillieBobbel23/test-assets.git tools/debug/"
   },
   "keywords": [
     "gulp",

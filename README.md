@@ -21,4 +21,4 @@ Depending on your needs run any of the following in the root folder of the proje
 
 ``npm run test`` : Tests the output folder using Jasmine
 
-``npm run debug`` : Build a self contained package for debugging in ./test/
+``npm run debug`` : Runs all tasks on a debug package ([test-assets](https://github.com/BillieBobbel23/test-assets)) for debugging
