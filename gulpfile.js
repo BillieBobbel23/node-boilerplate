@@ -17,8 +17,8 @@ gulp.task('make-fonts', require('./tools/make-fonts')(paths.in, paths.out));
 
 gulp.task("build", ['make-css', 'minify-img', 'make-fonts']);
 
-gulp.task('lint-css', require('./tools/lint-css')(paths));
-gulp.task('lint-html', require('./tools/lint-html')(paths));
+gulp.task('lint-css', require('./tools/lint-css')(paths.out));
+gulp.task('lint-html', require('./tools/lint-html')(path.join(__dirname, "tools/debug/")));
 
 gulp.task("lint", ['lint-html', 'lint-css']);
 
@@ -26,4 +26,6 @@ gulp.task("lint", ['lint-html', 'lint-css']);
 gulp.task('debug-css', require('./tools/make-css')(paths.debugIn, paths.debugOut));
 gulp.task('debug-img', require('./tools/minify-img')(paths.debugIn, paths.debugOut));
 gulp.task('debug-fonts', require('./tools/make-fonts')(paths.debugIn, paths.debugOut));
-gulp.task("debug", ['debug-css','debug-img','debug-fonts']);
+gulp.task('debug-lint-html', require('./tools/lint-html')(path.join(__dirname, "tools/debug/")));
+gulp.task('debug-lint-css', require('./tools/lint-css')(paths.debugOut));
+gulp.task("debug", ['debug-css','debug-img','debug-fonts', 'debug-lint-css', 'debug-lint-html']);

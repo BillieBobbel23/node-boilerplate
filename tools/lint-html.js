@@ -1,10 +1,10 @@
+var gulp = require('gulp');
+var path = require('path');
+var htmllint = require('gulp-htmllint');
 
 // Build CSS from SCSS files
 module.exports = function () {
     return function lintHtml(){
-      var gulp = require('gulp');
-      var htmllint = require('gulp-htmllint');
-
       function htmllintReporter(filepath, issues) {
         if (issues.length > 0) {
           issues.forEach(function (issue) {
@@ -13,7 +13,7 @@ module.exports = function () {
         }
       }
 
-      return gulp.src('tools/debug/*.html')
+      return gulp.src(path.join('**', '*.html'))
                 .pipe(htmllint({}, htmllintReporter))
     };
 

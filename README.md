@@ -3,8 +3,8 @@
 A NodeJS boilerplate for building, watching, linting and testing various front-end assets.
 Using GulpJS, Webpack and Jasmine.
 
-![stats](https://david-dm.org/BillieBobbel23/gulp-boilerplates/status.svg)
-![statsdev](https://david-dm.org/BillieBobbel23/gulp-boilerplates/dev-status.svg)
+![stats](https://david-dm.org/BillieBobbel23/node-boilerplate/status.svg)
+![statsdev](https://david-dm.org/BillieBobbel23/node-boilerplate/dev-status.svg)
 
 ## Installation:
 
