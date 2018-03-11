@@ -3,7 +3,7 @@ var path = require('path');
 var htmllint = require('gulp-htmllint');
 
 // Build CSS from SCSS files
-module.exports = function () {
+module.exports = function (input) {
     return function lintHtml(){
       function htmllintReporter(filepath, issues) {
         if (issues.length > 0) {
@@ -13,7 +13,7 @@ module.exports = function () {
         }
       }
 
-      return gulp.src(path.join('**', '*.html'))
+      return gulp.src(path.join(input, '*.html'))
                 .pipe(htmllint({}, htmllintReporter))
     };
 
