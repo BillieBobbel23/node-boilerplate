@@ -8,8 +8,8 @@
     "watch": "webpack",
     "lint": "gulp lint",
     "test": "jasmine",
-    "clean": "gulp clean",
-    "debug": "git clone https://github.com/BillieBobbel23/test-assets.git tools/debug/"
+    "debug": "gulp debug",
+    "debug:install": "git clone https://github.com/BillieBobbel23/test-assets.git tools/debug/"
   },
   "keywords": [
     "gulp",
