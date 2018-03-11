@@ -1,8 +1,5 @@
 var gulp = require('gulp');
 var path = require('path');
-// TODO: Allow calls without --i / --o parameters
-console.log(process.argv);
-
 var paths = {
    in: process.argv[4] ? path.resolve(__dirname, process.argv[4]) : path.resolve(__dirname, 'src/'),
    out: process.argv[6] ? path.resolve(__dirname, process.argv[6]): path.resolve(__dirname, 'dist/')
