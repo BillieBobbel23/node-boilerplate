@@ -1,14 +1,13 @@
+var gulp = require('gulp');
+var fontmin = require('gulp-fontmin');
+var ttf2woff2 = require('gulp-ttf2woff2');
 
 // Build CSS from SCSS files
-module.exports = function () {
+module.exports = function (paths) {
     return function makeFonts(){
-      var gulp = require('gulp');
-      var fontmin = require('gulp-fontmin');
-      var ttf2woff2 = require('gulp-ttf2woff2');
-
-      return gulp.src('src/fonts/*.ttf')
+      return gulp.src(paths.in + '**/*.ttf')
                 .pipe(fontmin({}))
                 .pipe(ttf2woff2())
-                .pipe(gulp.dest('dist/fonts'));
+                .pipe(gulp.dest(paths.out + 'fonts/'));
     };
 };

@@ -4,12 +4,12 @@ var csso = require('gulp-csso');
 var autoprefixer = require('gulp-autoprefixer');
 
 // Build CSS from SCSS files
-module.exports = function () {
+module.exports = function (paths) {
     return function makeCss(){
-      return gulp.src('src/style/*.scss')
+      return gulp.src(paths.in + '**/*.scss')
               .pipe(sass())
               .pipe(autoprefixer())
               .pipe(csso())
-              .pipe(gulp.dest('dist/css/'))
+              .pipe(gulp.dest(paths.out + 'css/'))
     };
 };
