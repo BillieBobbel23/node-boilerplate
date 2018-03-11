@@ -1,6 +1,6 @@
 {
   "name": "gulp-boilerplates",
-  "version": "0.1.0",
+  "version": "0.4.0",
   "description": "Build, watch, lint and test Front-end assets",
   "main": "package.json",
   "scripts": {
@@ -8,8 +8,8 @@
     "watch": "webpack",
     "lint": "gulp lint",
     "test": "jasmine",
-    "clean": "gulp clean",
-    "debug": "gulp build-test && webpack"
+    "debug": "gulp debug",
+    "debug:install": "git clone https://github.com/BillieBobbel23/test-assets.git tools/debug/"
   },
   "keywords": [
     "gulp",
@@ -27,6 +27,7 @@
     "gulp-autoprefixer": "^5.0.0",
     "gulp-csslint": "^1.0.1",
     "gulp-csso": "^3.0.1",
+    "gulp-filter": "^5.1.0",
     "gulp-fontmin": "^0.7.4",
     "gulp-htmllint": "0.0.15",
     "gulp-imagemin": "^4.1.0",

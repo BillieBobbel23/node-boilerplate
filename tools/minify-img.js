@@ -1,11 +1,12 @@
 var gulp = require('gulp');
+var path = require('path');
 var imagemin = require('gulp-imagemin');
 
 // Build CSS from SCSS files
-module.exports = function () {
+module.exports = function (input, output) {
     return function minifyImg(){
-      return gulp.src('src/img/*')
+      return gulp.src(path.resolve(input, 'img/*'))
               .pipe(imagemin())
-              .pipe(gulp.dest('dist/img'))
+              .pipe(gulp.dest(path.resolve(output, 'img/')))
     };
 };

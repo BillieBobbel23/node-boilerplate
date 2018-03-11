@@ -3,8 +3,8 @@
 A NodeJS boilerplate for building, watching, linting and testing various front-end assets.
 Using GulpJS, Webpack and Jasmine.
 
-![stats](https://david-dm.org/BillieBobbel23/gulp-boilerplates/status.svg)
-![statsdev](https://david-dm.org/BillieBobbel23/gulp-boilerplates/dev-status.svg)
+![stats](https://david-dm.org/BillieBobbel23/node-boilerplate/status.svg)
+![statsdev](https://david-dm.org/BillieBobbel23/node-boilerplate/dev-status.svg)
 
 ## Installation:
 
@@ -21,4 +21,9 @@ Depending on your needs run any of the following in the root folder of the proje
 
 ``npm run test`` : Tests the output folder using Jasmine
 
-``npm run debug`` : Build a self contained package for debugging in ./test/
+### Debugging
+Clone and run tasks on a tiny, self contained package for benchmarking and testing.
+
+``npm run debug:install`` : Clones ([test-assets](https://github.com/BillieBobbel23/test-assets)) with the debug assets
+
+``npm run debug`` : Runs all tasks on the debug package and output results
