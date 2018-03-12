@@ -10,7 +10,7 @@
     "test": "jasmine",
     "debug": "gulp build --i tools/debug/src/ --o tools/debug/dist/",
     "debug:install": "git clone https://github.com/BillieBobbel23/test-assets.git tools/debug/",
-    "webpack": "webpack",
+    "webpack": "webpack"
   },
   "keywords": [
     "gulp",
