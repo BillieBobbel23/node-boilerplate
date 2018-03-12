@@ -5,12 +5,12 @@
   "main": "package.json",
   "scripts": {
     "build": "gulp build && webpack --config tools/webpack.config.js",
-    "watch": "gulp watch",
     "lint": "gulp lint && eslint src/js/",
+    "watch": "gulp watch",
     "test": "jasmine",
     "debug": "gulp build --i tools/debug/src/ --o tools/debug/dist/",
     "debug:install": "git clone https://github.com/BillieBobbel23/test-assets.git tools/debug/",
-    "webpack": "webpack"
+    "webpack": "webpack --config tools/webpack-watch.config.js"
   },
   "keywords": [
     "gulp",
