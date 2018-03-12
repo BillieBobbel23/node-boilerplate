@@ -11,6 +11,7 @@ require('gulp-stats')(gulp);
 gulp.task('make-css', require('./tools/make-css')(paths.in, paths.out));
 gulp.task('minify-img', require('./tools/minify-img')(paths.in, paths.out));
 gulp.task('make-fonts', require('./tools/make-fonts')(paths.in, paths.out));
+gulp.task('make-svg', require('./tools/make-svg')(paths.in, paths.out));
 // Lint tasks
 gulp.task('lint-css', require('./tools/lint-css')(paths.out));
 gulp.task('lint-html', require('./tools/lint-html')(__dirname));
@@ -19,5 +20,5 @@ gulp.task('watch', require('./tools/watch-assets')(paths.in));
 
 // Combined tasks
 gulp.task("default", ['build']);
-gulp.task("build", ['make-css', 'minify-img', 'make-fonts']);
+gulp.task("build", ['make-css', 'minify-img', 'make-fonts', 'make-svg']);
 gulp.task("lint", ['lint-html', 'lint-css']);
