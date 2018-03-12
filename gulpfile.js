@@ -1,8 +1,8 @@
 var gulp = require('gulp');
 var path = require('path');
 var paths = {
-   in: process.argv[4] ? path.resolve(__dirname, process.argv[4]) : path.resolve(__dirname, 'src/'),
-   out: process.argv[6] ? path.resolve(__dirname, process.argv[6]): path.resolve(__dirname, 'dist/')
+   in: process.argv[3] == '--i' ? path.resolve(__dirname, process.argv[4]) : path.resolve(__dirname, 'src/'),
+   out: process.argv[5] == '--o' ? path.resolve(__dirname, process.argv[6]): path.resolve(__dirname, 'dist/')
 };
 // Logger
 require('gulp-stats')(gulp);
