@@ -1,12 +1,12 @@
 {
   "name": "gulp-boilerplates",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Build, watch, lint and test Front-end assets",
   "main": "package.json",
   "scripts": {
     "build": "gulp build && webpack --config tools/webpack.config.js",
     "watch": "gulp watch",
-    "lint": "gulp lint && cd ./node_modules/.bin/ && eslint src/js/",
+    "lint": "gulp lint && eslint src/js/",
     "test": "jasmine",
     "debug": "gulp build --i tools/debug/src/ --o tools/debug/dist/",
     "debug:install": "git clone https://github.com/BillieBobbel23/test-assets.git tools/debug/",
