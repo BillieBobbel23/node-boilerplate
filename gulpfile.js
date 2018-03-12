@@ -15,7 +15,7 @@ gulp.task('make-fonts', require('./tools/make-fonts')(paths.in, paths.out));
 gulp.task('lint-css', require('./tools/lint-css')(paths.out));
 gulp.task('lint-html', require('./tools/lint-html')(__dirname));
 // Watch
-gulp.task('watch', require('./tools/watch-assets')(__dirname));
+gulp.task('watch', require('./tools/watch-assets')(paths.in));
 
 // Combined tasks
 gulp.task("default", ['build']);
