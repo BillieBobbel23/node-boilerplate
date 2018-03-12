@@ -4,12 +4,13 @@
   "description": "Build, watch, lint and test Front-end assets",
   "main": "package.json",
   "scripts": {
-    "build": "gulp build --i src/ --o dist/ && webpack --config tools/webpack.config.js",
-    "watch": "webpack",
+    "build": "gulp build && webpack --config tools/webpack.config.js",
+    "watch": "gulp watch",
     "lint": "gulp lint",
     "test": "jasmine",
     "debug": "gulp build --i tools/debug/src/ --o tools/debug/dist/",
-    "debug:install": "git clone https://github.com/BillieBobbel23/test-assets.git tools/debug/"
+    "debug:install": "git clone https://github.com/BillieBobbel23/test-assets.git tools/debug/",
+    "webpack": "webpack",
   },
   "keywords": [
     "gulp",
