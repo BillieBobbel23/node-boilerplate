@@ -17,6 +17,8 @@ gulp.task('lint-css', require('./tools/lint-css')(paths.out));
 gulp.task('lint-html', require('./tools/lint-html')(__dirname));
 // Watch
 gulp.task('watch', require('./tools/watch-assets')(paths.in));
+// Cleanup
+gulp.task("clean", require('./tools/clean')(paths.out));
 
 // Combined tasks
 gulp.task("default", ['build']);
