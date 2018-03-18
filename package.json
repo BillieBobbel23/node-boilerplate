@@ -9,11 +9,11 @@
   "scripts": {
     "build": "gulp build && webpack --config tools/webpack.config.js",
     "build:clean": "gulp clean && npm run build",
-    "lint": "gulp lint && eslint src/js/",
+    "lint": "gulp lint && eslint -c tools/.eslintrc.js src/js/ ",
     "watch": "start webpack --config tools/webpack-watch.config.js && gulp watch",
     "tests": "jasmine",
     "debug": "gulp build --i tools/debug/src/ --o tools/debug/dist/",
-    "debug:install": "git clone https://github.com/BillieBobbel23/test-assets.git tools/debug/"
+    "debug:install": "git clone --depth=1 https://github.com/BillieBobbel23/test-assets.git tools/debug/"
   },
   "keywords": [
     "gulp",
