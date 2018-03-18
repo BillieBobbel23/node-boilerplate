@@ -7,7 +7,7 @@ var autoprefixer = require('gulp-autoprefixer');
 // Build CSS from SCSS files
 module.exports = function (input, output) {
     return function makeCss(){
-      return gulp.src(path.resolve(input, 'scss/*.scss'))
+      return gulp.src(path.resolve(input, 'scss/**/*.scss'))
               .pipe(sass())
               .pipe(autoprefixer())
               .pipe(csso())
