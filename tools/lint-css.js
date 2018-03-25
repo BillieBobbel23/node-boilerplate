@@ -6,11 +6,12 @@ var stylestats = require('gulp-stylestats');
 // Build CSS from SCSS files
 module.exports = function (input) {
     return function lintCss(){
-      return gulp.src(path.join(input, 'css/*.css'))
+      return gulp.src(path.join(input, 'css/**/*.css'))
                 .pipe(csslint())
                 .pipe(csslint.formatter())
                 .pipe(stylestats({
-                //  type: 'json' ||
+                  type: 'json',
+                  output: false
                 }));
     };
 };

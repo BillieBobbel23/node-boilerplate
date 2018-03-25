@@ -13,8 +13,26 @@ module.exports = function (input) {
         }
       }
 
-      return gulp.src(path.join(input, '*.html'))
-                .pipe(htmllint({}, htmllintReporter))
+      return gulp.src(path.join(input, '../*.html'))
+                .pipe(htmllint({
+                  rules: {
+                    // DOM related
+                    "doctype-first": true,
+                    "doctype-html5": true,
+
+                    "head-req-title": true,
+                    "head-valid-content-model": true,
+                    "href-style": "relative",
+                    // SEO related
+                    "title-max-len": 80,
+                    "title-no-dup": true,
+                    "html-req-lang": true,
+                    "lang-style": true,
+                    // A11Y
+                    "focusable-tabindex-style": true,
+                    "img-req-alt": true,
+                  }
+                }, htmllintReporter))
     };
 
 

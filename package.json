@@ -1,16 +1,29 @@
 {
   "name": "gulp-boilerplates",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Build, watch, lint and test Front-end assets",
   "main": "package.json",
+  "config": {
+    "path_webpack": "tools/webpack.config.js"
+  },
   "scripts": {
-    "build": "gulp build && webpack --config tools/webpack.config.js",
-    "lint": "gulp lint && eslint src/js/",
-    "watch": "gulp watch",
+    "clean": "rm -rf dist/",
+    "gulp-build": "gulp build --gulpfile tools/gulpfile.js",
+    "gulp-watch": "gulp watch --gulpfile tools/gulpfile.js",
+    "gulp-lint": "gulp lint --gulpfile tools/gulpfile.js",
+    "es-lint": "eslint -c tools/.eslintrc.js src/js/",
+    "wp-build": "webpack --config tools/webpack.config.js",
+    "wp-watch": "webpack --config tools/webpack-watch.config.js",
+
+    "build": "npm run gulp-build && npm run wp-build",
+    "watch": "start npm run wp-watch && npm run gulp-watch",
+    "lint": "npm run gulp-lint && npm run es-lint",
     "test": "jasmine",
-    "debug": "gulp build --i tools/debug/src/ --o tools/debug/dist/",
-    "debug:install": "git clone https://github.com/BillieBobbel23/test-assets.git tools/debug/",
-    "webpack": "webpack --config tools/webpack-watch.config.js"
+
+    "rebuild": "npm run clean && npm run build",
+
+    "debug": "gulp build --i debug/src/ --o debug/dist/ --gulpfile tools/gulpfile.js",
+    "debug:install": "git clone --depth=1 https://github.com/BillieBobbel23/test-assets.git tools/debug/"
   },
   "keywords": [
     "gulp",
