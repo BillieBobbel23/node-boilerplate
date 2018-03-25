@@ -11,24 +11,20 @@ Using GulpJS, Webpack and Jasmine.
 ``git clone https://github.com/BillieBobbel23/node-boilerplate && npm install``
 
 ## Usage:
-Depending on your needs run any of the following in the root folder of the project:
+There are four main tasks:
 
-``npm run build`` :  Build all Front-end assets to the output folder
+* ``npm run build`` :  Builds all Front-end assets to the output folder
+* ``npm run watch`` : Starts streams for GulpJS and Webpack **Opens a new window**
+* ``npm run lint`` : Lints output HTML, CSS and JS
+* ``npm test`` : Runs tests on JS using Jasmine
 
-``npm run watch`` : **Spawns a new window for webpack** and watches input folders
+and two subtasks:
 
-``npm run lint`` : Lints output HTML, CSS and JS
-
-``npm run test`` : Tests the output folder using Jasmine
+* ``npm run clean`` :  Removes output folder
+* ``npm run rebuild`` :  Runs *clean* followed by *build*
 
 ### Debugging
 Clones [test-assets](https://github.com/BillieBobbel23/test-assets) into tools/debug to run the tasks against
 
-``npm run debug:init`` : Runs all tasks on the debug package and output results
-
-### Flags
-There are a few flags available for certain tasks:
-
-``npm run debug:clean`` : **Removes the debug folder** and rebuilds it
-
-``npm run build:clean`` :  **Removes the output folder** and rebuilds the assets
+* ``npm run debug:init`` : Runs all tasks on the debug package and output results
+* ``npm run debug`` : Runs all tasks on the debug package and output results
