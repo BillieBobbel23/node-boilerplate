@@ -3,15 +3,12 @@
   "version": "0.7.0",
   "description": "Build, watch, lint and test Front-end assets",
   "main": "package.json",
-  "config": {
-    "path_webpack": "tools/webpack.config.js"
-  },
   "scripts": {
     "clean": "rm -rf dist/",
     "gulp-build": "gulp build --gulpfile tools/gulpfile.js",
     "gulp-watch": "gulp watch --gulpfile tools/gulpfile.js",
     "gulp-lint": "gulp lint --gulpfile tools/gulpfile.js",
-    "es-lint": "eslint -c tools/.eslintrc.js src/js/",
+    "es-lint": "eslint -c linters/.eslintrc.js src/js/",
     "wp-build": "webpack --config tools/webpack.prod.js",
     "wp-watch": "webpack --config tools/webpack.dev.js",
     "build": "npm run gulp-build && npm run wp-build",
