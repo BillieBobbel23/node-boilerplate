@@ -1,5 +1,5 @@
 const path = require('path');
-const CONFIG = require('./config.js');
+const CONFIG = require('../config.js');
 
 module.exports = {
   entry: [
