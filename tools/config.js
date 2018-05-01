@@ -4,8 +4,8 @@ const CONFIG = {
 
   "WEBPACK_BUNDLE_NAME": "bundle",
   "WEBPACK_BUNDLED_FILES": [
-    "empty.js",
-    "not.js"
+    "../src/js/empty.js",
+    "../src/js/not.js"
   ]
 };
 module.exports = CONFIG;
