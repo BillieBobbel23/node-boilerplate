@@ -8,10 +8,21 @@ Using GulpJS, Webpack and Jasmine.
 
 ## Installation:
 
-``git clone https://github.com/BillieBobbel23/node-boilerplate && npm install``
+```
+git clone https://github.com/BillieBobbel23/node-boilerplate tools &&
+npm --prefix ./tools install ./tools
+```
+
+**Windows:**
+
+```
+git clone https://github.com/BillieBobbel23/node-boilerplate tools
+cd tools
+npm install
+```
 
 ## Usage:
-There are four main tasks:
+Run NPM scripts from the installed folder or append ```--prefix ./tools```
 
 * ``npm run build`` :  Builds all Front-end assets to the output folder
 * ``npm run watch`` : Starts streams for GulpJS and Webpack **Opens a new window**
@@ -22,6 +33,19 @@ and two subtasks:
 
 * ``npm run clean`` :  Removes output folder
 * ``npm run rebuild`` :  Runs *clean* followed by *build*
+
+
+## Configuration:
+By default the input and output paths used are:
+
+```
+root
+  ./src
+  ./dist
+  ./tools
+```
+
+The input/output directories can be adjusted using ...
 
 ### Debugging
 Clones [test-assets](https://github.com/BillieBobbel23/test-assets) into tools/debug to run the tasks against
