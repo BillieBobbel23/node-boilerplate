@@ -1,4 +1,4 @@
-var CONFIG = require('../config.js');
+var CONFIG = require('config.js');
 
 var gulp = require('gulp');
 var path = require('path');
