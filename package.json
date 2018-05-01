@@ -1,6 +1,6 @@
 {
-  "name": "gulp-boilerplates",
-  "version": "0.6.0",
+  "name": "node-boilerplate",
+  "version": "0.7",
   "description": "Build, watch, lint and test Front-end assets",
   "main": "package.json",
   "config": {
