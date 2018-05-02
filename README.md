@@ -22,7 +22,12 @@ npm install
 ```
 
 ## Usage:
-Run NPM scripts from the installed folder or append ```--prefix ./tools```
+
+### Running scripts
+
+``npm run TASK_NAME --prefix ./tools``
+
+### Scripts
 
 * ``npm run build`` :  Builds all Front-end assets to the output folder
 * ``npm run watch`` : Starts streams for GulpJS and Webpack **Opens a new window**
@@ -33,19 +38,6 @@ and two subtasks:
 
 * ``npm run clean`` :  Removes output folder
 * ``npm run rebuild`` :  Runs *clean* followed by *build*
-
-
-## Configuration:
-By default the input and output paths used are:
-
-```
-root
-  ./src
-  ./dist
-  ./tools
-```
-
-The input/output directories can be adjusted using ...
 
 ### Debugging
 Clones [test-assets](https://github.com/BillieBobbel23/test-assets) into tools/debug to run the tasks against
