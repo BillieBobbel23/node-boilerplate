@@ -8,10 +8,26 @@ Using GulpJS, Webpack and Jasmine.
 
 ## Installation:
 
-``git clone https://github.com/BillieBobbel23/node-boilerplate && npm install``
+```
+git clone https://github.com/BillieBobbel23/node-boilerplate tools &&
+npm --prefix ./tools install ./tools
+```
+
+**Windows:**
+
+```
+git clone https://github.com/BillieBobbel23/node-boilerplate tools
+cd tools
+npm install
+```
 
 ## Usage:
-There are four main tasks:
+
+### Running scripts
+
+``npm run TASK_NAME --prefix ./tools``
+
+### Scripts
 
 * ``npm run build`` :  Builds all Front-end assets to the output folder
 * ``npm run watch`` : Starts streams for GulpJS and Webpack **Opens a new window**

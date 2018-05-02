@@ -1,8 +1,10 @@
+var CONFIG = require('../config.js');
+
 var gulp = require('gulp');
 var path = require('path');
 var paths = {
-   in: process.argv[3] == '--i' ? path.resolve(__dirname, process.argv[4]) : path.resolve(__dirname, '../src/'),
-   out: process.argv[5] == '--o' ? path.resolve(__dirname, process.argv[6]): path.resolve(__dirname, '../dist/')
+   in: process.argv[3] == '--i' ? path.resolve(__dirname, process.argv[4]) : path.resolve(__dirname, CONFIG.DIRECTORY_INPUT),
+   out: process.argv[5] == '--o' ? path.resolve(__dirname, process.argv[6]): path.resolve(__dirname, CONFIG.DIRECTORY_OUTPUT)
 };
 // Logger
 //require('gulp-stats')(gulp);
@@ -13,8 +15,8 @@ gulp.task('minify-img', require('./minify-img')(paths.in, paths.out));
 gulp.task('make-fonts', require('./make-fonts')(paths.in, paths.out));
 gulp.task('make-svg', require('./make-svg')(paths.in, paths.out));
 // Lint tasks
-gulp.task('lint-css', require('./lint-css')(paths.out));
-gulp.task('lint-html', require('./lint-html')(__dirname));
+gulp.task('lint-css', require('./linters/lint-css')(paths.out));
+gulp.task('lint-html', require('./linters/lint-html')(__dirname));
 // Watch
 gulp.task('watch', require('./watch-assets')(paths.in));
 // Cleanup
