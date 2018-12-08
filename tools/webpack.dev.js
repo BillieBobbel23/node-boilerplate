@@ -11,5 +11,14 @@ module.exports = merge(common, {
   watch: true,
   output: {
     filename: `${CONFIG.WEBPACK_BUNDLE_NAME}-test.js`
-  }
+  },
+  new SassPlugin(
+    {
+      "../scss/style.scss":"../css/style-dev.css"
+    },{
+    sourceMap: true,
+    sass: { outputStyle: 'compressed' },
+    autoprefixer: true
+  }, process.env.NODE_ENV)
+],
 });

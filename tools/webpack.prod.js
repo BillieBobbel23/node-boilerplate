@@ -24,7 +24,7 @@ module.exports = merge(common ,{
       'process.env.NODE_ENV': JSON.stringify('production')
     }),
     new SassPlugin(
-      { "../src/scss/style.scss" : "../../../dist/css/style-10.min.css" },
+      { "../src/scss/style.scss" : "../../dist/css/style-10.min.css" },
       {
         sourceMap: true,
         sass: { outputStyle: 'compressed' },

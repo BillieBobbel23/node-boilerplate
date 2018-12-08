@@ -7,6 +7,6 @@ module.exports = {
     path.resolve(__dirname, CONFIG.WEBPACK_BUNDLED_FILES[1])
   ],
   output: {
-    path: path.resolve(__dirname, `${CONFIG.DIRECTORY_OUTPUT}js/`)
+    path: path.resolve(__dirname, CONFIG.WEBPACK_OUTPUT)
   },
 };
