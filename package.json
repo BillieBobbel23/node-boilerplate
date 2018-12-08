@@ -6,19 +6,24 @@
   "scripts": {
     "clean": "rm -rf dist/",
     "es-lint": "eslint -c linters/.eslintrc.js src/js/",
+
     "wp-build": "webpack --config tools/webpack.prod.js",
     "wp-watch": "webpack --config tools/webpack.dev.js",
     "wp-test": "webpack --config tools/webpack/webpack.test.js",
+
     "build": "npm run gulp-build && npm run wp-build",
     "watch": "start npm run wp-watch && npm run gulp-watch",
     "lint": "npm run gulp-lint && npm run es-lint",
     "test": "jasmine",
     "rebuild": "npm run clean && npm run build",
+
     "debug": "gulp build --i debug/src/ --o debug/dist/ --gulpfile tools/gulpfile.js",
     "debug:install": "git clone --depth=1 https://github.com/BillieBobbel23/test-assets.git tools/debug/",
+
     "gulp-build": "gulp build --gulpfile tools/gulpfile.js",
     "gulp-watch": "gulp watch --gulpfile tools/gulpfile.js",
     "gulp-lint": "gulp lint --gulpfile tools/gulpfile.js"
+
   },
   "keywords": [
     "SHOULD",
