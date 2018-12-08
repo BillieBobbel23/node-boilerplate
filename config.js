@@ -1,6 +1,6 @@
 const CONFIG = {
-  "DIRECTORY_INPUT": "../../src/",
-  "DIRECTORY_OUTPUT": "../../dist/",
+  "DIRECTORY_INPUT": "../src/",
+  "DIRECTORY_OUTPUT": "../dist/",
 
   "WEBPACK_BUNDLE_NAME": "bundle",
   "WEBPACK_BUNDLED_FILES": [
