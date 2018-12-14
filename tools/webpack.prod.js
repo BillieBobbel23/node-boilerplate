@@ -2,33 +2,21 @@ const path = require('path');
 const merge = require('webpack-merge');
 const uglify = require('uglifyjs-webpack-plugin');
 const webpack = require('webpack');
-const SassPlugin = require('sass-webpack-plugin');
 
-const common = require('./webpack.common.js');
+const common = require('./webpack/webpack.common.js');
+const css = require('./webpack/webpack.css.js');
+
 const CONFIG = require('../config.js');
+const fileName = require('./fileName.js');
 
-const scssPath = `${CONFIG.DIRECTORY_INPUT}scss/style.scss`;
-const cssPath = `${CONFIG.DIRECTORY_OUTPUT}css/style-10.min.scss`;
-
-module.exports = merge(common ,{
+module.exports = merge(common, css, {
   mode: 'production',
   devtool: 'cheap-source-map',
   output: {
-    filename: `${CONFIG.WEBPACK_BUNDLE_NAME}.prod.js`,
+    filename: fileName(CONFIG.BUNDLE.NAME, CONFIG.BUNDLE.EXT.PRD),
   },
   plugins: [
-    new uglify({
-      sourceMap: true
-    }),
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production')
-    }),
-    new SassPlugin(
-      { "../src/scss/style.scss" : "../../dist/css/style-10.min.css" },
-      {
-        sourceMap: true,
-        sass: { outputStyle: 'compressed' },
-        autoprefixer: true
-      })
+    new uglify({ sourceMap: true }),
+    new webpack.DefinePlugin({ 'process.env.NODE_ENV': JSON.stringify('production') })
   ],
 });

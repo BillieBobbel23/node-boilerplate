@@ -1,27 +1,30 @@
 {
   "name": "node-boilerplate",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "Build, watch, lint and test Front-end assets",
   "main": "package.json",
   "scripts": {
     "clean": "rm -rf dist/",
-    "gulp-build": "gulp build --gulpfile tools/gulpfile.js",
-    "gulp-watch": "gulp watch --gulpfile tools/gulpfile.js",
-    "gulp-lint": "gulp lint --gulpfile tools/gulpfile.js",
     "es-lint": "eslint -c linters/.eslintrc.js src/js/",
     "wp-build": "webpack --config tools/webpack.prod.js",
     "wp-watch": "webpack --config tools/webpack.dev.js",
+    "wp-test": "webpack --config tools/webpack/webpack.test.js",
     "build": "npm run gulp-build && npm run wp-build",
     "watch": "start npm run wp-watch && npm run gulp-watch",
     "lint": "npm run gulp-lint && npm run es-lint",
     "test": "jasmine",
     "rebuild": "npm run clean && npm run build",
     "debug": "gulp build --i debug/src/ --o debug/dist/ --gulpfile tools/gulpfile.js",
-    "debug:install": "git clone --depth=1 https://github.com/BillieBobbel23/test-assets.git tools/debug/"
+    "debug:install": "git clone --depth=1 https://github.com/BillieBobbel23/test-assets.git tools/debug/",
+    "gulp-build": "gulp build --gulpfile tools/gulpfile.js",
+    "gulp-watch": "gulp watch --gulpfile tools/gulpfile.js",
+    "gulp-lint": "gulp lint --gulpfile tools/gulpfile.js"
   },
   "keywords": [
-    "gulp",
-    "gulpjs",
+    "SHOULD",
+    "BE",
+    "USEFUL",
+    "RIGHT?",
     "webpack",
     "jasmine",
     "boilerplate",
@@ -54,10 +57,12 @@
     "svg-scaler": "^0.1.5",
     "uglifyjs-webpack-plugin": "^1.2.5",
     "webpack": "^4.6.0",
+    "webpack-bundle-analyzer": "^3.0.3",
     "webpack-cli": "^3.1.2",
     "webpack-merge": "^4.1.2"
   },
   "dependencies": {
+    "csso-webpack-plugin": "^1.0.0-beta.12",
     "lodash": "^4.17.10"
   }
 }
