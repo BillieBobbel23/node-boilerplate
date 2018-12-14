@@ -5,11 +5,12 @@ const webpack = require('webpack');
 
 const common = require('./webpack/webpack.common.js');
 const css = require('./webpack/webpack.css.js');
+const img = require('./webpack/webpack.img.js');
 
 const CONFIG = require('../config.js');
 const fileName = require('./fileName.js');
 
-module.exports = merge(common, css, {
+module.exports = merge(common, css, img, {
   mode: 'production',
   devtool: 'cheap-source-map',
   output: {

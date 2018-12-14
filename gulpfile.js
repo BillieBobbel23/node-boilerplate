@@ -15,7 +15,7 @@ var paths = {
 
 // Combined tasks
 // gulp.task("default", ['build']);
-// gulp.task("build", ['minify-img', 'make-fonts', 'make-svg']);
+// gulp.task("build", ['make-css', 'minify-img', 'make-fonts', 'make-svg']);
 //
 // TODO: Keep linting?
 gulp.task('lint-css', require('./linters/lint-css')(paths.out));

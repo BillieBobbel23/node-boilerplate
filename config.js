@@ -21,7 +21,10 @@ const CONFIG = {
     "SCSS": {
       "PATH": "scss/",
       "NAME": "style.scss"
-    }
+    },
+    "IMG": {
+      "PATH": "img/"
+    },
   },
   "DIST": {
     // Output is based on executors location
@@ -32,6 +35,9 @@ const CONFIG = {
     "CSS": {
       "PATH": "css/",
       "NAME": "style.min.css"
+    },
+    "IMG": {
+      "PATH": "img/"
     }
   }
 };
