@@ -9,7 +9,7 @@ const fileName = require('./fileName.js');
 
 module.exports = merge(common, css, {
   mode: 'development',
-  dev_tool: 'inline-source-map',
+  devtool: 'inline-source-map',
 
   watch: true,
   output: {

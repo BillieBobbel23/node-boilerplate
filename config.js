@@ -11,23 +11,26 @@ const CONFIG = {
     }
   },
   "SRC": {
+    "ROOT": "../src/",
     "JS": {
-      "PATH": "../src/js/",
+      "PATH": "js/",
       "NAME": "not",
-      "TEST": "empty"
+      // Modify this (and webpack.common.js) if you have multiple .js entries
+      "NAME_TOO": "empty"
     },
     "SCSS": {
-      "PATH": "../src/scss",
+      "PATH": "scss/",
       "NAME": "style.scss"
     }
   },
   "DIST": {
+    // Output is based on executors location
+    "ROOT": "../../../dist/",
     "JS": {
-      // ./tools/tools/webpack/
-      "PATH": "../../../dist/js/"
+      "PATH": "js/"
     },
     "CSS": {
-      "PATH": "../../../dist/css/",
+      "PATH": "css/",
       "NAME": "style.min.css"
     }
   }

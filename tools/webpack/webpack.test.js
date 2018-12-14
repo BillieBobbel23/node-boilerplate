@@ -11,15 +11,9 @@ module.exports = merge(common ,{
   mode: 'production',
   devtool: 'cheap-source-map',
   output: {
-    filename: `${CONFIG.BUNDLE.NAME}.${CONFIG.BUNDLE.EXTENSIONS.TEST}.js`,
+    filename: `${CONFIG.BUNDLE.NAME}.${CONFIG.BUNDLE.EXT.TST}.js`,
   },
   plugins: [
-    new uglify({
-      sourceMap: true
-    }),
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production')
-    }),
     new BundleAnalyzerPlugin()
   ],
 });
