@@ -4,10 +4,10 @@ const fileName = require('../fileName.js');
 
 module.exports = {
   entry: [
-    CONFIG.SRC.JS.PATH + fileName(CONFIG.SRC.JS.NAME),
-    CONFIG.SRC.JS.PATH + fileName(CONFIG.SRC.JS.TEST),
+    CONFIG.SRC.ROOT + CONFIG.SRC.JS.PATH + fileName(CONFIG.SRC.JS.NAME),
+    CONFIG.SRC.ROOT + CONFIG.SRC.JS.PATH + fileName(CONFIG.SRC.JS.NAME_TOO),
   ],
   output: {
-    path: path.resolve(__dirname, CONFIG.DIST.JS.PATH)
+    path: path.resolve(__dirname, CONFIG.DIST.ROOT + CONFIG.DIST.JS.PATH)
   },
 };
