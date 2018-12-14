@@ -6,17 +6,13 @@
   "scripts": {
     "clean": "rm -rf dist/",
     "rebuild": "npm run clean && npm run build",
-
     "build": "webpack --config tools/webpack.prod.js",
     "watch": "webpack --config tools/webpack.dev.js",
-
     "analyze": "webpack --config tools/webpack/webpack.test.js",
     "test": "jasmine",
-
     "lint": "npm run gulp-lint && npm run es-lint",
     "es-lint": "eslint  ./linters/.eslintrc.js ./src/js/",
     "gulp-lint": "gulp lint",
-
     "debug": "gulp build --i debug/src/ --o debug/dist/ --gulpfile tools/gulpfile.js",
     "debug:install": "git clone --depth=1 https://github.com/BillieBobbel23/test-assets.git tools/debug/"
   },
@@ -62,7 +58,9 @@
     "webpack-merge": "^4.1.2"
   },
   "dependencies": {
+    "copy-webpack-plugin": "^4.6.0",
     "csso-webpack-plugin": "^1.0.0-beta.12",
+    "imagemin-webpack-plugin": "^2.3.0",
     "lodash": "^4.17.10"
   }
 }
