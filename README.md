@@ -25,7 +25,17 @@ npm install
 
 ### Running scripts
 
-``npm run TASK_NAME --prefix ./tools``
+**Directly:**    
+In your CLI go to the `./tools` directory and run `npm run TASK_NAME`.    
+Alternatively run it from the root folder by using a prefix ``npm run TASK_NAME --prefix ./tools``
+
+**Automated**    
+Add a reference to any task to your ``package.json`` to extend existing functionality
+````
+  "scripts": {
+    "build": "npm run build --prefix ./tools"
+  },
+````
 
 ### Scripts
 

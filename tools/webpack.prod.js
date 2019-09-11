@@ -1,23 +1,28 @@
-const path = require('path');
-const merge = require('webpack-merge');
-const uglify = require('uglifyjs-webpack-plugin');
-const webpack = require('webpack');
+const path = require("path");
+const webpack = require("webpack");
+const merge = require("webpack-merge");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
-const common = require('./webpack.common.js');
-const CONFIG = require('../config.js');
+const common = require("./webpack/webpack.common.js");
+const css = require("./webpack/webpack.css.js");
+const img = require("./webpack/webpack.img.js");
+const font = require("./webpack/webpack.font.js");
 
-module.exports = merge(common ,{
-  mode: 'production',
-  devtool: 'cheap-source-map',
+const CONFIG = require("../config.js");
+const fileName = require("./fileName.js");
+
+module.exports = merge(common, css, img, font, {
+  mode: "production",
+  devtool: "cheap-source-map",
   output: {
-    filename: `${CONFIG.WEBPACK_BUNDLE_NAME}.prod.js`,
+    filename: fileName(CONFIG.BUNDLE.NAME, CONFIG.BUNDLE.EXT.PRD)
+  },
+  optimization: {
+    minimizer: [new UglifyJsPlugin()]
   },
   plugins: [
-    new uglify({
-      sourceMap: true
-    }),
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production')
+      "process.env.NODE_ENV": JSON.stringify("production")
     })
   ]
 });
