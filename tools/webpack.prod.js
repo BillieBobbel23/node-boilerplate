@@ -7,11 +7,12 @@ const common = require("./webpack/webpack.common.js");
 const css = require("./webpack/webpack.css.js");
 const img = require("./webpack/webpack.img.js");
 const font = require("./webpack/webpack.font.js");
+const lint = require("./webpack/webpack.lint.js");
 
 const CONFIG = require("../config.js");
 const fileName = require("./fileName.js");
 
-module.exports = merge(common, css, img, font, {
+module.exports = merge(common, css, font, img, lint, {
   mode: "production",
   devtool: "cheap-source-map",
   output: {

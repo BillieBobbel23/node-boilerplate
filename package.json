@@ -1,6 +1,6 @@
 {
   "name": "node-boilerplate",
-  "version": "0.7.3",
+  "version": "0.8.1",
   "description": "Build, watch, lint and test Front-end assets",
   "main": "package.json",
   "scripts": {
@@ -11,22 +11,18 @@
     "analyze": "webpack --config tools/webpack/webpack.test.js",
     "test": "jasmine",
     "test-self": "webpack --config tools/webpack/webpack.test.self.js",
-    "lint": "npm run gulp-lint && npm run es-lint",
-    "es-lint": "eslint  ./linters/.eslintrc.js ./src/js/",
-    "gulp-lint": "gulp lint",
-    "debug": "gulp build --i debug/src/ --o debug/dist/ --gulpfile tools/gulpfile.js",
-    "debug:install": "git clone --depth=1 https://github.com/BillieBobbel23/test-assets.git tools/debug/"
+    "lint": "npm run es-lint",
+    "es-lint": "eslint  ./linters/.eslintrc.js ./src/js/"
   },
-  "keywords": [
-    "SHOULD",
-    "BE",
-    "USEFUL",
-    "RIGHT?",
+  "keywords": [ 
+    "boilerplate",
+    "build system",
+    "linter",
+    "toolkit",
     "webpack",
     "jasmine",
-    "boilerplate",
-    "linting",
-    "testing"
+    "eslint",
+    "htmllint"
   ],
   "author": "Ralph van Barneveld",
   "license": "ISC",
@@ -38,13 +34,7 @@
     "csso-webpack-plugin": "^1.0.0-beta.12",
     "eslint": "^6.4.0",
     "eslint-plugin-react": "^7.12.0",
-    "gulp": "^3.9.1",
-    "gulp-csslint": "^1.0.1",
-    "gulp-csso": "^3.0.1",
-    "gulp-filter": "^5.1.0",
-    "gulp-htmllint": "0.0.16",
-    "gulp-stats": "0.0.4",
-    "gulp-stylestats": "^3.1.0",
+    "htmllint-loader": "^2.1.4",
     "imagemin-webpack-plugin": "^2.3.0",
     "jasmine": "^3.1.0",
     "lodash": "^4.17.15",

@@ -1,15 +1,15 @@
-const path = require('path');
-const merge = require('webpack-merge');
+const path = require("path");
+const merge = require("webpack-merge");
 
-const common = require('./webpack/webpack.common.js');
-const css = require('./webpack/webpack.css.js');
+const common = require("./webpack/webpack.common.js");
+const css = require("./webpack/webpack.css.js");
 
-const CONFIG = require('../config.js');
-const fileName = require('./fileName.js');
+const CONFIG = require("../config.js");
+const fileName = require("./fileName.js");
 
 module.exports = merge(common, css, {
-  mode: 'development',
-  devtool: 'inline-source-map',
+  mode: "development",
+  devtool: "inline-source-map",
 
   watch: true,
   output: {

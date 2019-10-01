@@ -5,8 +5,8 @@ const CONFIG = {
   BUNDLE: {
     NAME: "bundle",
     EXT: {
-      DEV: "dev",
-      PRD: "prod",
+      DEV: "",
+      PRD: "min",
       TST: "test"
     }
   },
@@ -14,7 +14,7 @@ const CONFIG = {
     ROOT: "../src/",
     JS: {
       PATH: "js/",
-      NAME: "ecma"
+      NAME: "index"
       // Modify this (and webpack.common.js) if you have multiple .js entries
       // "NAME_TOO": "empty"
     },
